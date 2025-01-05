@@ -20,7 +20,8 @@ const eslintConfig = [
       "@typescript-eslint/no-empty-interface": "off",
       "@typescript-eslint/no-unused-expressions": "off",
       "@typescript-eslint/no-non-null-asserted-optional-chain": "off",
-      "react/display-name": "off"
+      "react/display-name": "off",
+      "react/no-unescaped-entities": "off"
     },
   },
 ];
