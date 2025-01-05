@@ -39,13 +39,17 @@ const LandingPage = ({
 
       {!showWelcome && (
         <>
-          <Navbar />
-          <AnimatedBackground />
-          <Home />
-          <About />
-          <Portfolio />
-          <Contact />
-          <Footer />
+          {typeof window !== "undefined" && (
+            <>
+              <Navbar />
+              <AnimatedBackground />
+              <Home />
+              <About />
+              <Portfolio />
+              <Contact />
+              <Footer />
+            </>
+          )}
         </>
       )}
     </>
