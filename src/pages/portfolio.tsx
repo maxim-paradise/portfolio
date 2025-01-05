@@ -14,9 +14,9 @@ import "aos/dist/aos.css";
 // import Certificate from "../components/Certificate";
 import { Code, Award, Boxes } from "lucide-react";
 import CardProject from "@/components/CardProject";
-import { Projects } from "@/lib/constants";
 import { ProjectType } from "@/lib/types";
 import { useIsMobile } from "@/lib/hooks/use-mobile";
+import { Projects } from "@/lib/constants";
 
 // Separate ShowMore/ShowLess button component
 const ToggleButton = ({
@@ -154,17 +154,19 @@ export default function FullWidthTabs() {
   }, []);
 
   useEffect(() => {
-    // Проверяем наличие флага в localStorage
-    const shouldScrollToPortfolio = localStorage.getItem("scrollToPortfolio");
+    if (typeof window !== "undefined") {
+      // Проверяем наличие флага в localStorage
+      const shouldScrollToPortfolio = localStorage.getItem("scrollToPortfolio");
 
-    if (shouldScrollToPortfolio) {
-      const portfolioElement = document.getElementById("Portofolio");
-      if (portfolioElement) {
-        portfolioElement.scrollIntoView({ behavior: "smooth" });
+      if (shouldScrollToPortfolio) {
+        const portfolioElement = document.getElementById("Portofolio");
+        if (portfolioElement) {
+          portfolioElement.scrollIntoView({ behavior: "smooth" });
+        }
+
+        // После прокрутки удаляем флаг, чтобы он не срабатывал на следующей странице
+        localStorage.removeItem("scrollToPortfolio");
       }
-
-      // После прокрутки удаляем флаг, чтобы он не срабатывал на следующей странице
-      localStorage.removeItem("scrollToPortfolio");
     }
   }, []);
 

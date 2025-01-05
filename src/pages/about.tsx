@@ -11,14 +11,12 @@ import {
 } from "lucide-react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Projects } from "@/lib/constants";
 
 const AboutPage = () => {
   // Memoized calculations
-  const { totalProjects, totalCertificates, YearExperience } = useMemo(() => {
-    const storedProjects = JSON.parse(localStorage.getItem("projects") || "[]");
-    const storedCertificates = JSON.parse(
-      localStorage.getItem("certificates") || "[]"
-    );
+  const { totalProjects, YearExperience } = useMemo(() => {
+    const storedProjects = Projects;
 
     const startDate = new Date("2022-06-24");
     const today = new Date();
@@ -32,7 +30,7 @@ const AboutPage = () => {
 
     return {
       totalProjects: storedProjects.length,
-      totalCertificates: storedCertificates.length,
+      // totalCertificates: storedCertificates.length,
       YearExperience: experience,
     };
   }, []);
@@ -89,7 +87,7 @@ const AboutPage = () => {
         animation: "fade-left",
       },
     ],
-    [totalProjects, totalCertificates, YearExperience]
+    [totalProjects, YearExperience]
   );
 
   return (
@@ -268,7 +266,7 @@ const ProfileImage = memo(() => (
 interface CardProps {
   icon: LucideIcon;
   color: string;
-  value: string;
+  value: number;
   label: string;
   description: string;
   animation: string;
