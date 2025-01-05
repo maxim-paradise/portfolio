@@ -124,10 +124,16 @@ const AboutPage = () => {
               data-aos="fade-right"
               data-aos-duration="1500"
             >
-              seorang siswa Teknik Jaringan Komputer dan Telekomunikasi yang
-              tertarik dalam pengembangan Front-End. Saya berfokus pada
-              menciptakan pengalaman digital yang menarik dan selalu berusaha
-              memberikan solusi terbaik dalam setiap proyek.
+              I'm a student deeply involved in web development and software
+              engineering. I work with technologies like Next.js, React,
+              Flutter, and Node.js, building websites and applications. My
+              projects often involve database management with Prisma, user
+              authentication through Clerk, and performance optimization. I'm
+              experienced in deploying and managing servers with Nginx and AWS,
+              and I use tools like Cypress for testing. Currently, I'm exploring
+              artificial intelligence and plan to pursue a career in AI
+              development, with a focus on working in Zurich after completing
+              school.
             </p>
 
             <div className="flex flex-col lg:flex-row items-center lg:items-start gap-4 lg:gap-4 lg:px-0 w-full">

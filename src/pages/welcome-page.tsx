@@ -1,13 +1,14 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Code2, Github, Globe, LucideIcon, User } from "lucide-react";
+import { Code2, Github, Globe, LucideIcon, User, X } from "lucide-react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 const WelcomePage = ({ onLoadingComplete }: { onLoadingComplete: any }) => {
   const [isLoading, setIsLoading] = useState(true);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     AOS.init({
@@ -16,15 +17,27 @@ const WelcomePage = ({ onLoadingComplete }: { onLoadingComplete: any }) => {
       mirror: false,
     });
 
-    const timer = setTimeout(() => {
+    timerRef.current = setTimeout(() => {
       setIsLoading(false);
       setTimeout(() => {
         onLoadingComplete?.();
       }, 1000);
     }, 4000);
 
-    return () => clearTimeout(timer);
+    return () => {
+      if (timerRef.current) {
+        clearTimeout(timerRef.current); // Очищаем таймер при размонтировании
+      }
+    };
   }, [onLoadingComplete]);
+
+  const handleClose = () => {
+    setIsLoading(false);
+    if (timerRef.current) {
+      clearTimeout(timerRef.current); // Останавливаем таймер при нажатии на крестик
+    }
+    onLoadingComplete?.();
+  };
 
   const containerVariants = {
     exit: {
@@ -62,6 +75,13 @@ const WelcomePage = ({ onLoadingComplete }: { onLoadingComplete: any }) => {
           variants={containerVariants}
         >
           <BackgroundEffect />
+
+          <button
+            onClick={handleClose} // Устанавливаем isLoading в false при клике
+            className="absolute top-6 right-6 z-50 p-2 bg-white/10 hover:bg-white/20 rounded-full transition-all duration-300"
+          >
+            <X className="w-6 h-6 text-white" />
+          </button>
 
           <div className="relative min-h-screen flex items-center justify-center px-4">
             <div className="w-full max-w-4xl mx-auto">

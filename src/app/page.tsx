@@ -1,7 +1,7 @@
 "use client";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import { AnimatePresence } from "framer-motion";
 import WelcomePage from "@/pages/welcome-page";
@@ -12,25 +12,14 @@ import Home from "@/pages/home";
 import About from "@/pages/about";
 import ProjectDetails from "@/components/project-details";
 import Portfolio from "@/pages/portfolio";
+import { useFirstVisit } from "@/lib/hooks/useFirstVisit";
+import Contact from "@/pages/contact";
 
 function App() {
-  const [showWelcome, setShowWelcome] = useState(true);
+  const [showWelcome, setShowWelcome] = useFirstVisit();
 
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <LandingPage
-              showWelcome={showWelcome}
-              setShowWelcome={setShowWelcome}
-            />
-          }
-        />
-        <Route path="/project/:id" element={<ProjectPageLayout />} />
-      </Routes>
-    </BrowserRouter>
+    <LandingPage showWelcome={showWelcome} setShowWelcome={setShowWelcome} />
   );
 }
 const LandingPage = ({
@@ -55,6 +44,7 @@ const LandingPage = ({
           <Home />
           <About />
           <Portfolio />
+          <Contact />
           <Footer />
         </>
       )}
@@ -62,10 +52,4 @@ const LandingPage = ({
   );
 };
 
-const ProjectPageLayout = () => (
-  <>
-    <ProjectDetails />
-    <Footer />
-  </>
-);
 export default App;

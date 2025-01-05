@@ -13,6 +13,10 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 // import Certificate from "../components/Certificate";
 import { Code, Award, Boxes } from "lucide-react";
+import CardProject from "@/components/CardProject";
+import { Projects } from "@/lib/constants";
+import { ProjectType } from "@/lib/types";
+import { useIsMobile } from "@/lib/hooks/use-mobile";
 
 // Separate ShowMore/ShowLess button component
 const ToggleButton = ({
@@ -139,14 +143,29 @@ export default function FullWidthTabs() {
   const [certificates, setCertificates] = useState([]);
   const [showAllProjects, setShowAllProjects] = useState(false);
   const [showAllCertificates, setShowAllCertificates] = useState(false);
-  const isMobile = window.innerWidth < 768;
-  const initialItems = isMobile ? 4 : 6;
+  const isMobile = useIsMobile();
+  const initialItems = isMobile ? 3 : 6;
 
   useEffect(() => {
     // Initialize AOS once
     AOS.init({
       once: false, // This will make animations occur only once
     });
+  }, []);
+
+  useEffect(() => {
+    // Проверяем наличие флага в localStorage
+    const shouldScrollToPortfolio = localStorage.getItem("scrollToPortfolio");
+
+    if (shouldScrollToPortfolio) {
+      const portfolioElement = document.getElementById("Portofolio");
+      if (portfolioElement) {
+        portfolioElement.scrollIntoView({ behavior: "smooth" });
+      }
+
+      // После прокрутки удаляем флаг, чтобы он не срабатывал на следующей странице
+      localStorage.removeItem("scrollToPortfolio");
+    }
   }, []);
 
   const handleChange = (event: any, newValue: any) => {
@@ -162,8 +181,8 @@ export default function FullWidthTabs() {
   }, []);
 
   const displayedProjects = showAllProjects
-    ? projects
-    : projects.slice(0, initialItems);
+    ? Projects
+    : Projects.slice(0, initialItems);
   const displayedCertificates = showAllCertificates
     ? certificates
     : certificates.slice(0, initialItems);
@@ -194,9 +213,8 @@ export default function FullWidthTabs() {
           </span>
         </h2>
         <p className="text-slate-400 max-w-2xl mx-auto text-sm md:text-base mt-2">
-          Explore my journey through projects, certifications, and technical
-          expertise. Each section represents a milestone in my continuous
-          learning path.
+          Explore my journey through projects and technical expertise. Each
+          section represents a milestone in my continuous learning path.
         </p>
       </div>
 
@@ -279,19 +297,19 @@ export default function FullWidthTabs() {
               label="Projects"
               {...a11yProps(0)}
             />
-            <Tab
+            {/* <Tab
               icon={
                 <Award className="mb-2 w-5 h-5 transition-all duration-300" />
               }
               label="Certificates"
               {...a11yProps(1)}
-            />
+            /> */}
             <Tab
               icon={
                 <Boxes className="mb-2 w-5 h-5 transition-all duration-300" />
               }
               label="Tech Stack"
-              {...a11yProps(2)}
+              {...a11yProps(1)}
             />
           </Tabs>
         </AppBar>
@@ -304,7 +322,7 @@ export default function FullWidthTabs() {
           <TabPanel value={value} index={0} dir={theme.direction}>
             <div className="container mx-auto flex justify-center items-center overflow-hidden">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 2xl:grid-cols-3 gap-5">
-                {displayedProjects.map((project: any, index) => (
+                {displayedProjects.map((project: ProjectType, index) => (
                   <div
                     key={project.id || index}
                     data-aos={
@@ -322,18 +340,19 @@ export default function FullWidthTabs() {
                         : "1000"
                     }
                   >
-                    {/* <CardProject
-                      Img={project.Img}
-                      Title={project.Title}
-                      Description={project.Description}
-                      Link={project.Link}
+                    <CardProject
+                      img={project.img}
+                      title={project.title}
+                      description={project.description}
+                      link={project.link}
                       id={project.id}
-                    /> */}
+                    />
                   </div>
                 ))}
               </div>
             </div>
-            {projects.length > initialItems && (
+
+            {Projects.length > initialItems && (
               <div className="mt-6 w-full flex justify-start">
                 <ToggleButton
                   onClick={() => toggleShowMore("projects")}
@@ -343,7 +362,7 @@ export default function FullWidthTabs() {
             )}
           </TabPanel>
 
-          <TabPanel value={value} index={1} dir={theme.direction}>
+          {/* <TabPanel value={value} index={1} dir={theme.direction}>
             <div className="container mx-auto flex justify-center items-center overflow-hidden">
               <div className="grid grid-cols-1 md:grid-cols-3 md:gap-5 gap-4">
                 {displayedCertificates.map((certificate, index) => (
@@ -364,7 +383,7 @@ export default function FullWidthTabs() {
                         : "1000"
                     }
                   >
-                    {/* <Certificate ImgSertif={certificate.Img} /> */}
+                    <Certificate ImgSertif={certificate.Img} />
                   </div>
                 ))}
               </div>
@@ -377,9 +396,9 @@ export default function FullWidthTabs() {
                 />
               </div>
             )}
-          </TabPanel>
+          </TabPanel> */}
 
-          <TabPanel value={value} index={2} dir={theme.direction}>
+          <TabPanel value={value} index={1} dir={theme.direction}>
             <div className="container mx-auto flex justify-center items-center overflow-hidden pb-[5%]">
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 lg:gap-8 gap-5 ">
                 {techStacks.map((stack, index) => (
