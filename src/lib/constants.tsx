@@ -33,20 +33,6 @@ export const Projects: ProjectType[] = [
     img: "/projects/3d-portfolio.png",
   },
   {
-    id: "Paradise Pizza",
-    title: "Paradise Pizza",
-    description:
-      "Learn to build a fully functional e-commerce platform for pizza delivery using Next.js 14, Prisma, PostgreSQL. This project-based course covers product filtering, user authentication, and online payments, providing hands-on experience with modern web development technologies.",
-    features: [
-      "Comprehensive product filtering system with server-side rendering and URI parameter storage, ensuring smooth navigation and a seamless user experience.",
-      "User authentication and registration with email/password, GitHub, and Google sign-ins, as well as profile management and email-based account verification.",
-    ],
-    techStack: ["TypeScript", "Tailwand CSS", "Prisma", "PostgreSQL"],
-    github: "https://github.com/Creator-Art-Life/paradise-production",
-    link: "https://paradise-pizza.vercel.app",
-    img: "/projects/pizza.png",
-  },
-  {
     id: "Portfolio",
     title: "Portfolio",
     description:
@@ -59,6 +45,66 @@ export const Projects: ProjectType[] = [
     github: "Private",
     link: "https://inferno-ashes.vercel.app",
     img: "/projects/white-portfolio.png",
+  },
+  {
+    id: "Code Editor",
+    title: "Code Editor",
+    description:
+      "Code Editor is an advanced web-based code editing platform that supports real-time collaboration, syntax highlighting, and project management, empowering developers to write and manage code efficiently.",
+    features: [
+      "Real-time code editing with syntax highlighting.",
+      "Support for multiple programming languages.",
+      "Integration with external APIs for enhanced development workflows.",
+      "Customizable themes and layouts.",
+    ],
+    techStack: [
+      "TypeScript",
+      "React",
+      "Next.js",
+      "Monaco Editor",
+      "Tailwind CSS",
+    ],
+    github: "https://github.com/Creator-Art-Life/code-editor",
+    link: "https://editor-monaco.vercel.app",
+    img: "/projects/code-editor-snippets.png",
+  },
+  {
+    id: "Inferno",
+    title: "Inferno",
+    description:
+      "Create powerful and fully customizable websites and applications with our advanced SaaS platform. This site offers everything you need to build feature-rich web solutions using cutting-edge tools like Clerk Authentication, Neon Tech, Uploadcare, Ngrok, Next.js 14, Stripe, and Bun. Whether you're automating workflows, managing users, or setting up subscription models, our platform provides the flexibility and scalability required to bring your ideas to life.",
+    features: [
+      "Comprehensive drag-and-drop automation builder that allows you to create intricate workflows and automation processes by visually connecting nodes, ensuring smooth integration of services like Google Drive, Slack, Notion, and Discord",
+      "Advanced user management and authentication powered by Clerk, enabling seamless onboarding, secure login flows, and multi-factor authentication, combined with powerful database solutions through Neon Tech for high performance and scalability.",
+      "Full Stripe integration for subscription-based billing, enabling monetization through credit-based payment models, recurring subscriptions, and detailed financial reporting directly within your application.",
+    ],
+    techStack: [
+      "TypeScript",
+      "Neon Tech",
+      "Uploadcare",
+      "Ngrok",
+      "Stripe",
+      "Bun",
+      "Aceternity UI",
+      "Prisma",
+    ],
+    github: "https://github.com/Creator-Art-Life/inferno",
+    link: "https://inferno-ashes.vercel.app",
+    img: "/projects/inferno.png",
+  },
+  {
+    id: "Paradise Pizza",
+    title: "Paradise Pizza",
+    description:
+      "Learn to build a fully functional e-commerce platform for pizza delivery using Next.js 14, Prisma, PostgreSQL. This project-based course covers product filtering, user authentication, and online payments, providing hands-on experience with modern web development technologies.",
+    features: [
+      "Comprehensive product filtering system with server-side rendering and URI parameter storage, ensuring smooth navigation and a seamless user experience.",
+      "User authentication and registration with email/password, GitHub, and Google sign-ins, as well as profile management and email-based account verification.",
+    ],
+    techStack: ["TypeScript", "Tailwand CSS", "Prisma", "PostgreSQL"],
+    github: "https://github.com/Creator-Art-Life/paradise-production",
+    link: "https://paradise-pizza.vercel.app",
+    img: "/projects/pizza.png",
   },
   {
     id: "Scrape",
@@ -83,31 +129,6 @@ export const Projects: ProjectType[] = [
     github: "https://github.com/Creator-Art-Life/scrape",
     link: "https://scrape-browser.vercel.app",
     img: "/projects/scrape.png",
-  },
-
-  {
-    id: "Inferno",
-    title: "Inferno",
-    description:
-      "Create powerful and fully customizable websites and applications with our advanced SaaS platform. This site offers everything you need to build feature-rich web solutions using cutting-edge tools like Clerk Authentication, Neon Tech, Uploadcare, Ngrok, Next.js 14, Stripe, and Bun. Whether you're automating workflows, managing users, or setting up subscription models, our platform provides the flexibility and scalability required to bring your ideas to life.",
-    features: [
-      "Comprehensive drag-and-drop automation builder that allows you to create intricate workflows and automation processes by visually connecting nodes, ensuring smooth integration of services like Google Drive, Slack, Notion, and Discord",
-      "Advanced user management and authentication powered by Clerk, enabling seamless onboarding, secure login flows, and multi-factor authentication, combined with powerful database solutions through Neon Tech for high performance and scalability.",
-      "Full Stripe integration for subscription-based billing, enabling monetization through credit-based payment models, recurring subscriptions, and detailed financial reporting directly within your application.",
-    ],
-    techStack: [
-      "TypeScript",
-      "Neon Tech",
-      "Uploadcare",
-      "Ngrok",
-      "Stripe",
-      "Bun",
-      "Aceternity UI",
-      "Prisma",
-    ],
-    github: "https://github.com/Creator-Art-Life/inferno",
-    link: "https://inferno-ashes.vercel.app",
-    img: "/projects/inferno.png",
   },
 ];
 
