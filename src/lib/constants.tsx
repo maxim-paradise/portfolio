@@ -43,7 +43,7 @@ export const Projects: ProjectType[] = [
     ],
     techStack: ["JavaScript", "React", "Vercel", "CSS"],
     github: "Private",
-    link: "https://inferno-ashes.vercel.app",
+    link: "https://ebat-port.vercel.app",
     img: "/projects/white-portfolio.png",
   },
   {

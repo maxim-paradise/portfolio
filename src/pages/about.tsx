@@ -130,8 +130,7 @@ const AboutPage = () => {
               experienced in deploying and managing servers with Nginx and AWS,
               and I use tools like Cypress for testing. Currently, I'm exploring
               artificial intelligence and plan to pursue a career in AI
-              development, with a focus on working in Zurich after completing
-              school.
+              development
             </p>
 
             <div className="flex flex-col lg:flex-row items-center lg:items-start gap-4 lg:gap-4 lg:px-0 w-full">

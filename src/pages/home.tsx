@@ -121,8 +121,8 @@ const Home = () => {
                   data-aos="fade-up"
                   data-aos-delay="1000"
                 >
-                  Menciptakan Website Yang Inovatif, Fungsional, dan
-                  User-Friendly untuk Solusi Digital.
+                  Creating Innovative, Functional, and User-Friendly Websites
+                  for Digital Solutions.
                 </p>
 
                 {/* Tech Stack */}
@@ -231,7 +231,7 @@ const MainTitle = memo(() => (
       <span className="relative inline-block">
         <span className="absolute -inset-2 bg-gradient-to-r from-[#6366f1] to-[#a855f7] blur-2xl opacity-20"></span>
         <span className="relative bg-gradient-to-r from-white via-blue-100 to-purple-200 bg-clip-text text-transparent">
-          Frontend
+          Fullstack
         </span>
       </span>
       <br />
