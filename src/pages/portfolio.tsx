@@ -425,13 +425,13 @@ export default function FullWidthTabs() {
               <div className="mt-6 md:ml-6 w-full flex justify-start">
                 <ToggleButton
                   onClick={() => {
-                    // if (showAllStack) {
-                    //   const portfolioSection =
-                    //     document.getElementById("Portofolio");
-                    //   if (portfolioSection) {
-                    //     portfolioSection.scrollIntoView({ behavior: "smooth" });
-                    //   }
-                    // }
+                    if (showAllStack) {
+                      const portfolioSection =
+                        document.getElementById("Portofolio");
+                      if (portfolioSection) {
+                        portfolioSection.scrollIntoView({ behavior: "smooth" });
+                      }
+                    }
                     toggleShowMore("stack");
                   }}
                   isShowingMore={showAllStack}
