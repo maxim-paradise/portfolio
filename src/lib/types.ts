@@ -1,3 +1,4 @@
+import { LucideIcon } from "lucide-react";
 import { z } from "zod";
 
 export type ProjectType = {
@@ -16,3 +17,5 @@ export const ContactSchema = z.object({
   email: z.string().email("Invalid email format"),
   message: z.string().min(10),
 });
+
+export type PropsTech = { icon: string | LucideIcon; language: string };

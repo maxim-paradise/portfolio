@@ -1,5 +1,5 @@
 import { SVGProps } from "react";
-import { ProjectType } from "./types";
+import { ProjectType, PropsTech } from "./types";
 import { Linkedin, Github, Instagram, Youtube } from "lucide-react";
 
 export const Projects: ProjectType[] = [
@@ -22,12 +22,18 @@ export const Projects: ProjectType[] = [
     id: "3D Portfolio",
     title: "3D Portfolio",
     description:
-      "Learn to build a fully functional e-commerce platform for pizza delivery using Next.js 14, Prisma, PostgreSQL. This project-based course covers product filtering, user authentication, and online payments, providing hands-on experience with modern web development technologies.",
+      "Learn to build a stunning 3D portfolio website using React, Three.js, and modern JavaScript libraries. This project-based course teaches advanced techniques in interactive 3D design, smooth animations, and routing to create a personalized portfolio that stands out.",
     features: [
-      "Comprehensive product filtering system with server-side rendering and URI parameter storage, ensuring smooth navigation and a seamless user experience.",
-      "User authentication and registration with email/password, GitHub, and Google sign-ins, as well as profile management and email-based account verification.",
+      "Immersive 3D visualizations and animations powered by Three.js, providing a highly engaging user experience.",
+      "Dynamic page transitions and routing with React Router, along with customizable interactive components using Framer Motion and React Tilt.",
     ],
-    techStack: ["TypeScript", "Tailwand CSS", "Prisma", "PostgreSQL"],
+    techStack: [
+      "JavaScript",
+      "Three.js",
+      "React",
+      "Framer Motion",
+      "React Router",
+    ],
     github: "https://github.com/Creator-Art-Life/paradise-production",
     link: "https://3dportfoliosigma.vercel.app",
     img: "/projects/3d-portfolio.png",
@@ -232,4 +238,33 @@ export const socialLinks = [
     color: "black",
     gradient: "from-[#000000] via-[#25F4EE] to-[#FE2C55]",
   },
+];
+
+export const techStacks: PropsTech[] = [
+  { icon: "html.svg", language: "HTML" },
+  { icon: "css.svg", language: "CSS" },
+  { icon: "typescript.png", language: "TypeScript" },
+  { icon: "javascript.svg", language: "JavaScript" },
+  { icon: "tailwind.svg", language: "Tailwind CSS" },
+  { icon: "reactjs.svg", language: "ReactJS" },
+  { icon: "postgresql.png", language: "PostgreSQL" },
+  { icon: "vite.svg", language: "Vite" },
+  { icon: "nodejs.svg", language: "Node JS" },
+  { icon: "mongodb.svg", language: "MongoDB" },
+  { icon: "zustand.svg", language: "Zustand" },
+  { icon: "threejs.png", language: "Three.js" },
+  { icon: "ngrok.jpeg", language: "Ngrok" },
+  { icon: "framermotion.svg", language: "Framer Motion" },
+  { icon: "shadcnui.png", language: "Shadcn UI" },
+  { icon: "neon.png", language: "Neon Tech" },
+  { icon: "vercel.svg", language: "Vercel" },
+  { icon: "aceternityui.png", language: "Aceternity UI" },
+  { icon: "openai.png", language: "OpenAI" },
+  { icon: "reactquery.png", language: "React Query" },
+  { icon: "prisma.svg", language: "Prisma" },
+  { icon: "stripe.svg", language: "Stripe" },
+  { icon: "bootstrap.svg", language: "Bootstrap" },
+  { icon: "firebase.svg", language: "Firebase" },
+  { icon: "MUI.svg", language: "Material UI" },
+  { icon: "SweetAlert.svg", language: "SweetAlert2" },
 ];

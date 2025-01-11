@@ -12,11 +12,11 @@ import TechStackIcon from "../components/TechStackIcon";
 import AOS from "aos";
 import "aos/dist/aos.css";
 // import Certificate from "../components/Certificate";
-import { Code, Award, Boxes } from "lucide-react";
+import { Code, Award, Boxes, LucideIcon } from "lucide-react";
 import CardProject from "@/components/CardProject";
-import { ProjectType } from "@/lib/types";
+import { ProjectType, PropsTech } from "@/lib/types";
 import { useIsMobile } from "@/lib/hooks/use-mobile";
-import { Projects } from "@/lib/constants";
+import { Projects, techStacks } from "@/lib/constants";
 
 // Separate ShowMore/ShowLess button component
 const ToggleButton = ({
@@ -121,30 +121,17 @@ function a11yProps(index: number) {
   };
 }
 
-const techStacks = [
-  { icon: "html.svg", language: "HTML" },
-  { icon: "css.svg", language: "CSS" },
-  { icon: "javascript.svg", language: "JavaScript" },
-  { icon: "tailwind.svg", language: "Tailwind CSS" },
-  { icon: "reactjs.svg", language: "ReactJS" },
-  { icon: "vite.svg", language: "Vite" },
-  { icon: "nodejs.svg", language: "Node JS" },
-  { icon: "bootstrap.svg", language: "Bootstrap" },
-  { icon: "firebase.svg", language: "Firebase" },
-  { icon: "MUI.svg", language: "Material UI" },
-  { icon: "vercel.svg", language: "Vercel" },
-  { icon: "SweetAlert.svg", language: "SweetAlert2" },
-];
-
 export default function FullWidthTabs() {
   const theme = useTheme();
   const [value, setValue] = useState(0);
   const [projects, setProjects] = useState([]);
   const [certificates, setCertificates] = useState([]);
   const [showAllProjects, setShowAllProjects] = useState(false);
+  const [showAllStack, setShowAllStack] = useState(false);
   const [showAllCertificates, setShowAllCertificates] = useState(false);
   const isMobile = useIsMobile();
   const initialItems = isMobile ? 3 : 6;
+  const initialItemsStack = isMobile ? 12 : 24;
 
   useEffect(() => {
     // Initialize AOS once
@@ -177,6 +164,8 @@ export default function FullWidthTabs() {
   const toggleShowMore = useCallback((type: any) => {
     if (type === "projects") {
       setShowAllProjects((prev) => !prev);
+    } else if (type === "stack") {
+      setShowAllStack((prev) => !prev);
     } else {
       setShowAllCertificates((prev) => !prev);
     }
@@ -185,6 +174,9 @@ export default function FullWidthTabs() {
   const displayedProjects = showAllProjects
     ? Projects
     : Projects.slice(0, initialItems);
+  const displayedStack = showAllStack
+    ? techStacks
+    : techStacks.slice(0, initialItemsStack);
   const displayedCertificates = showAllCertificates
     ? certificates
     : certificates.slice(0, initialItems);
@@ -403,7 +395,7 @@ export default function FullWidthTabs() {
           <TabPanel value={value} index={1} dir={theme.direction}>
             <div className="container mx-auto flex justify-center items-center overflow-hidden pb-[5%]">
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 lg:gap-8 gap-5 ">
-                {techStacks.map((stack, index) => (
+                {displayedStack.map((stack, index) => (
                   <div
                     key={index}
                     data-aos={
@@ -429,6 +421,23 @@ export default function FullWidthTabs() {
                 ))}
               </div>
             </div>
+            {techStacks.length > initialItems && (
+              <div className="mt-6 md:ml-6 w-full flex justify-start">
+                <ToggleButton
+                  onClick={() => {
+                    // if (showAllStack) {
+                    //   const portfolioSection =
+                    //     document.getElementById("Portofolio");
+                    //   if (portfolioSection) {
+                    //     portfolioSection.scrollIntoView({ behavior: "smooth" });
+                    //   }
+                    // }
+                    toggleShowMore("stack");
+                  }}
+                  isShowingMore={showAllStack}
+                />
+              </div>
+            )}
           </TabPanel>
         </SwipeableViews>
       </Box>
