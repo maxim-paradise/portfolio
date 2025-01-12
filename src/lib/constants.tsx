@@ -19,40 +19,6 @@ export const Projects: ProjectType[] = [
     img: "/projects/paradise-production.png",
   },
   {
-    id: "3D Portfolio",
-    title: "3D Portfolio",
-    description:
-      "Learn to build a stunning 3D portfolio website using React, Three.js, and modern JavaScript libraries. This project-based course teaches advanced techniques in interactive 3D design, smooth animations, and routing to create a personalized portfolio that stands out.",
-    features: [
-      "Immersive 3D visualizations and animations powered by Three.js, providing a highly engaging user experience.",
-      "Dynamic page transitions and routing with React Router, along with customizable interactive components using Framer Motion and React Tilt.",
-    ],
-    techStack: [
-      "JavaScript",
-      "Three.js",
-      "React",
-      "Framer Motion",
-      "React Router",
-    ],
-    github: "https://github.com/Creator-Art-Life/paradise-production",
-    link: "https://3dportfoliosigma.vercel.app",
-    img: "/projects/3d-portfolio.png",
-  },
-  {
-    id: "Portfolio",
-    title: "Portfolio",
-    description:
-      "Portfolio Website is the earlier version of this site, showcasing the various projects I've developed, certifications I've earned, and the technologies I specialize in, including my skills in web development, programming, and software engineering.",
-    features: [
-      "Showcasing various projects I have completed with detailed information.",
-      "Highlighting the technologies used in each project.",
-    ],
-    techStack: ["JavaScript", "React", "Vercel", "CSS"],
-    github: "Private",
-    link: "https://ebat-port.vercel.app",
-    img: "/projects/white-portfolio.png",
-  },
-  {
     id: "Code Editor",
     title: "Code Editor",
     description:
@@ -73,6 +39,40 @@ export const Projects: ProjectType[] = [
     github: "https://github.com/Creator-Art-Life/code-editor",
     link: "https://editor-monaco.vercel.app",
     img: "/projects/code-editor-snippets.png",
+  },
+  {
+    id: "Portfolio",
+    title: "Portfolio",
+    description:
+      "Portfolio Website is the earlier version of this site, showcasing the various projects I've developed, certifications I've earned, and the technologies I specialize in, including my skills in web development, programming, and software engineering.",
+    features: [
+      "Showcasing various projects I have completed with detailed information.",
+      "Highlighting the technologies used in each project.",
+    ],
+    techStack: ["JavaScript", "React", "Vercel", "CSS"],
+    github: "Private",
+    link: "https://ebat-port.vercel.app",
+    img: "/projects/white-portfolio.png",
+  },
+  {
+    id: "3D Portfolio",
+    title: "3D Portfolio",
+    description:
+      "Learn to build a stunning 3D portfolio website using React, Three.js, and modern JavaScript libraries. This project-based course teaches advanced techniques in interactive 3D design, smooth animations, and routing to create a personalized portfolio that stands out.",
+    features: [
+      "Immersive 3D visualizations and animations powered by Three.js, providing a highly engaging user experience.",
+      "Dynamic page transitions and routing with React Router, along with customizable interactive components using Framer Motion and React Tilt.",
+    ],
+    techStack: [
+      "JavaScript",
+      "Three.js",
+      "React",
+      "Framer Motion",
+      "React Router",
+    ],
+    github: "https://github.com/Creator-Art-Life/paradise-production",
+    link: "https://3dportfoliosigma.vercel.app",
+    img: "/projects/3d-portfolio.png",
   },
   {
     id: "Inferno",
@@ -97,6 +97,28 @@ export const Projects: ProjectType[] = [
     github: "https://github.com/Creator-Art-Life/inferno",
     link: "https://inferno-ashes.vercel.app",
     img: "/projects/inferno.png",
+  },
+  {
+    id: "Clone Google Drive",
+    title: "Clone Google Drive",
+    description:
+      "Clone Google Drive is a feature-rich project built using React, Appwrite, and modern JavaScript tools to replicate the core functionality of Google Drive. This project allows you to manage files, create folders, and share documents with ease. Learn how to integrate Appwrite for backend services, handle file uploads, and implement real-time data synchronization. This project-based approach teaches best practices in creating scalable and secure web applications.",
+    features: [
+      "Appwrite Integration: Seamless backend integration with Appwrite for user authentication, file storage, and real-time database features.",
+      "File Management: Upload, download, and manage files with drag-and-drop functionality, ensuring a smooth user experience.",
+      "Cloud Storage: Store and retrieve files from Appwrite is cloud storage, with full access control for privacy and security.",
+    ],
+    techStack: [
+      "Typescript",
+      "Appwrite",
+      "Zod",
+      "React",
+      "Recharts",
+      "react-hook-form",
+    ],
+    github: "https://github.com/Creator-Art-Life/google-drive",
+    link: "https://its-drive.vercel.app",
+    img: "/projects/drive.png",
   },
   {
     id: "Paradise Pizza",
