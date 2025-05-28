@@ -19,8 +19,8 @@ export const Projects: ProjectType[] = [
     img: "/projects/paradise-production.png",
   },
   {
-  id: "AI Job Parser",
-  title: "AI Job Parser",
+  id: "AI Job Scraper",
+  title: "AI Job Scraper",
   description:
     "AI Vacancy Parser is a comprehensive platform for parsing and analyzing vacancy postings using artificial intelligence. It features seamless integration of AI with dual systems: a backend built with Flask (Python) and a frontend using Next.js.",
   features: [
@@ -42,7 +42,7 @@ export const Projects: ProjectType[] = [
     "PostgreSql",
   ],
   github: "Private",
-  link: https://job-ai-scraper.vercel.app",
+  link: "https://job-ai-scraper.vercel.app",
   img: "/projects/ai-vacancy-parser.png",
 }
   {
