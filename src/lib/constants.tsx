@@ -19,6 +19,33 @@ export const Projects: ProjectType[] = [
     img: "/projects/paradise-production.png",
   },
   {
+  id: "AI Job Parser",
+  title: "AI Job Parser",
+  description:
+    "AI Vacancy Parser is a comprehensive platform for parsing and analyzing vacancy postings using artificial intelligence. It features seamless integration of AI with dual systems: a backend built with Flask (Python) and a frontend using Next.js.",
+  features: [
+    "AI-powered parsing of job postings for efficient data extraction.",
+    "Supports data scraping from multiple job sites with customizable configurations.",
+    "Integration of advanced AI models for classification and analysis.",
+    "User-friendly interface for viewing, filtering, and exporting extracted data.",
+    "Dual system architecture with a robust backend on Flask and a modern frontend on Next.js."
+  ],
+  techStack: [
+    "Python",
+    "Flask",
+    "Next.js",
+    "TypeScript",
+    "React",
+    "Tailwind CSS",
+    "LLM",
+    "Supabase",
+    "PostgreSql",
+  ],
+  github: "Private",
+  link: https://job-ai-scraper.vercel.app",
+  img: "/projects/ai-vacancy-parser.png",
+}
+  {
     id: "Code Editor",
     title: "Code Editor",
     description:
