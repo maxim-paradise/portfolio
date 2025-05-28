@@ -44,7 +44,7 @@ export const Projects: ProjectType[] = [
   github: "Private",
   link: "https://job-ai-scraper.vercel.app",
   img: "/projects/ai-vacancy-parser.png",
-}
+},
   {
     id: "Code Editor",
     title: "Code Editor",
