@@ -302,7 +302,7 @@ const PAUSE_DURATION = 2000;
 const WORDS = ["Network & Telecom Student", "Tech Enthusiast"];
 const TECH_STACK = ["React", "TypeScript", "Node.js", "Tailwind"];
 const SOCIAL_LINKS = [
-  { icon: Github, link: "https://github.com/Creator-Art-Life" },
+  { icon: Github, link: "https://github.com/maxim-paradise" },
   { icon: Linkedin, link: "https://www.linkedin.com" },
   { icon: Instagram, link: "https://www.instagram.com/maxim_raiskiy" },
 ];

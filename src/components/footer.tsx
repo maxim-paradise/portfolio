@@ -8,7 +8,7 @@ function Footer() {
         <span className="block text-sm pb-4 text-gray-500 text-center dark:text-gray-400">
           © 2025{" "}
           <a
-            href="https://github.com/Creator-Art-Life"
+            href="https://github.com/maxim-paradise"
             className="hover:underline"
           >
             Maxim™
